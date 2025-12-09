@@ -8349,6 +8349,7 @@ again:
 
 	p = task_of(se);
 
+	/*user modified code*/
 	if (strcmp(p->comm, "bash") == 0)
         	printk(KERN_INFO "CFS picked task: PID=%d (%s)\n", p->pid, p->comm);
 	/*
