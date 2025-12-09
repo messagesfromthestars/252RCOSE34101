@@ -4743,7 +4743,8 @@ int sched_fork(unsigned long clone_flags, struct task_struct *p)
 	 * Make sure we do not leak PI boosting priority to the child.
 	 */
 	p->prio = current->normal_prio;
-
+	
+	/*user modified code*/
 	printk(KERN_INFO "a process forked\n");
 
 	uclamp_fork(p);
