@@ -4744,7 +4744,7 @@ int sched_fork(unsigned long clone_flags, struct task_struct *p)
 	 */
 	p->prio = current->normal_prio;
 
-	printk(KERN_INFO "a process forked");
+	printk(KERN_INFO "a process forked\n");
 
 	uclamp_fork(p);
 
