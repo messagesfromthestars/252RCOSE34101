@@ -6629,6 +6629,7 @@ enqueue_task_fair(struct rq *rq, struct task_struct *p, int flags)
 	int idle_h_nr_running = task_has_idle_policy(p);
 	int task_new = !(flags & ENQUEUE_WAKEUP);
 	
+	/*user modified*/
 	if (strcmp(p->comm, "bash") == 0)
 		printk(KERN_INFO "CFS enqueued a task");
 	/*
