@@ -4744,6 +4744,8 @@ int sched_fork(unsigned long clone_flags, struct task_struct *p)
 	 */
 	p->prio = current->normal_prio;
 
+	printk(KERN_INFO "a process forked");
+
 	uclamp_fork(p);
 
 	/*
@@ -5157,7 +5159,7 @@ static inline void kmap_local_sched_out(void)
 	if (unlikely(current->kmap_ctrl.idx))
 		__kmap_local_sched_out();
 #endif
-}
+
 
 static inline void kmap_local_sched_in(void)
 {
