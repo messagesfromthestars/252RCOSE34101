@@ -4789,7 +4789,7 @@ int sched_fork(unsigned long clone_flags, struct task_struct *p)
 	plist_node_init(&p->pushable_tasks, MAX_PRIO);
 	RB_CLEAR_NODE(&p->pushable_dl_tasks);
 #endif
-	set_user_nice(p, 2);
+	set_user_nice(p, 3);
 	return 0;
 }
 
